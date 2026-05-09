@@ -1,28 +1,23 @@
-<footer class="mt-16 border-t-2 border-gray-700 py-8" data-simple-footer="true">
-  <div class="container mx-auto px-4">
-    <div class="flex items-center justify-between flex-wrap gap-4">
-      <div>
-        <div class="flex items-center mb-2">
-          <img
-            id="footer-logo"
-            src="{{baseUrl}}{{#if brandLogo}}{{brandLogo}}{{else}}images/favicon.svg{{/if}}"
-            alt="{{#if brandName}}{{brandName}}{{else}}Bento PDF{{/if}} Logo"
-            class="h-8 w-8 mr-2"
-          />
-          <span id="footer-brand" class="text-white font-bold text-lg"
-            >{{#if brandName}}{{brandName}}{{else}}BentoPDF{{/if}}</span
-          >
-        </div>
-        <p id="footer-copyright" class="text-gray-400 text-sm">
-          {{#if footerText}}{{footerText}}{{else}}&copy; 2026 BentoPDF. All
-          rights reserved.{{/if}}
-        </p>
-        <p class="text-gray-500 text-xs mt-2">
-          <span data-i18n="footer.version">Version</span>
-          <span id="app-version">{{appVersion}}</span>
-        </p>
-      </div>
-      <div id="simple-mode-lang-switcher" class="flex-shrink-0"></div>
-    </div>
+<footer
+  style="border-top: 1px solid #1f1f1f; padding: 2rem 1.5rem; text-align: center; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;"
+  data-simple-footer="true"
+>
+  <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.625rem;">
+    <img
+      id="footer-logo"
+      src="{{baseUrl}}{{#if brandLogo}}{{brandLogo}}{{else}}images/favicon-no-bg.svg{{/if}}"
+      alt="{{#if brandName}}{{brandName}}{{else}}PrivKit PDF{{/if}}"
+      style="width: 22px; height: 22px; border-radius: 5px;"
+    />
+    <span id="footer-brand" style="font-weight: 700; font-size: 0.9375rem; color: #f5f5f5;">
+      {{#if brandName}}{{brandName}}{{else}}PrivKit PDF{{/if}}
+    </span>
   </div>
+  <p id="footer-copyright" style="font-size: 0.875rem; color: #525252; margin: 0;">
+    {{#if footerText}}{{footerText}}{{else}}&copy; 2026 PrivKit &middot; Tus archivos nunca salen de tu navegador{{/if}}
+  </p>
+  <p style="font-size: 0.75rem; color: #2a2a2a; margin: 0.375rem 0 0;">
+    <span data-i18n="footer.version">v</span><span id="app-version">{{appVersion}}</span>
+  </p>
+  <div id="simple-mode-lang-switcher" style="margin-top: 1rem; display: flex; justify-content: center;"></div>
 </footer>
