@@ -1,6 +1,22 @@
-/* ── PrivKit Green Theme Override ──────────────────────────────── */
+/* ── PrivKit Theme Override ─────────────────────────────────────
+   Matches privacy-hub (privkit) dark palette exactly.
+   ─────────────────────────────────────────────────────────────── */
+
+/* 1. Remap Tailwind gray scale → PrivKit near-black */
 @theme {
-  /* Remap indigo/purple accent to PrivKit green */
+  --color-gray-950: #000000;
+  --color-gray-900: #0a0a0a;
+  --color-gray-800: #141414;
+  --color-gray-700: #1f1f1f;
+  --color-gray-600: #2a2a2a;
+  --color-gray-500: #525252;
+  --color-gray-400: #a3a3a3;
+  --color-gray-300: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-100: #f5f5f5;
+  --color-gray-50:  #fafafa;
+
+  /* Remap indigo / purple / violet → PrivKit green */
   --color-indigo-50:  #f0fdf4;
   --color-indigo-100: #dcfce7;
   --color-indigo-200: #bbf7d0;
@@ -20,13 +36,8 @@
   --color-purple-500: #22c55e;
   --color-purple-600: #16a34a;
   --color-purple-700: #15803d;
-  --color-purple-800: #166534;
-  --color-purple-900: #14532d;
 
   --color-violet-50:  #f0fdf4;
-  --color-violet-100: #dcfce7;
-  --color-violet-200: #bbf7d0;
-  --color-violet-300: #86efac;
   --color-violet-400: #4ade80;
   --color-violet-500: #22c55e;
   --color-violet-600: #16a34a;
@@ -761,3 +772,33 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none; /* Chrome, Safari, Edge */
   margin: 0;
 }
+
+/* 2. PrivKit body: near-black bg, system font */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif !important;
+  background-color: #0a0a0a !important;
+  color: #f5f5f5 !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 3. Tool cards → PrivKit palette */
+.tool-card {
+  border-color: #1f1f1f !important;
+  background-color: #0d0d0d !important;
+}
+
+.tool-card:hover {
+  border-color: rgba(34, 197, 94, 0.3) !important;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4) !important;
+}
+
+/* 4. Category headers */
+.category-header {
+  color: #f5f5f5 !important;
+}
+.category-header:hover,
+.category-header:hover .category-chevron {
+  color: #4ade80 !important;
+}
+
